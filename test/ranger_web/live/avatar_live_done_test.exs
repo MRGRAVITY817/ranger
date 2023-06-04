@@ -13,15 +13,15 @@ defmodule RangerWeb.AvatarLiveDoneTest do
     assert html =~ avatar_url
   end
 
-  test "renders avatar for given email (brittle)", %{conn: conn} do
-    email = "frodo@shire.com"
-    avatar_url = Gravatar.generate(email)
-    {:ok, _view, html} = live(conn, ~p"/avatar/#{email}")
+  # test "renders avatar for given email (brittle)", %{conn: conn} do
+  #   email = "frodo@shire.com"
+  #   avatar_url = Gravatar.generate(email)
+  #   {:ok, _view, html} = live(conn, ~p"/avatar/#{email}")
 
-    avatar = ~s(<img class="avatar" src="#{avatar_url}")
+  #   avatar = ~s(<img class="avatar" src="#{avatar_url}")
 
-    assert html =~ avatar
-  end
+  #   assert html =~ avatar
+  # end
 
   test "renders avatar for given email (robust)", %{conn: conn} do
     email = "frodo@shire.com"
