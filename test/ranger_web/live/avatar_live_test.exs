@@ -40,5 +40,9 @@ defmodule RangerWeb.AvatarLiveTest do
 
     # Source should contain avatar url
     assert has_element?(view, ~s(img[src*="#{avatar_url}"]))
+
+    # It's also possible to assign the element into value and check it
+    avatar = element(view, ~s(img[src*="#{avatar_url}"]))
+    assert has_element?(avatar)
   end
 end
