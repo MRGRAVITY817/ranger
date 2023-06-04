@@ -16,4 +16,11 @@ defmodule RangerWeb.GreetLiveTest do
 
     assert html =~ "Welcome to Testing LiveView"
   end
+
+  test "rendering connected state", %{conn: conn} do
+    # Start right away from connected state
+    {:ok, _view, html} = live(conn, ~p"/greet")
+
+    assert html =~ "Welcome to Testing LiveView"
+  end
 end
