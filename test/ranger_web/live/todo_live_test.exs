@@ -12,4 +12,14 @@ defmodule RangerWeb.TodoLiveTest do
 
     assert has_element?(view, "[data-role=todo]", "Form fellowship")
   end
+
+  test "user can create a new todo (target event directly)", %{conn: conn} do
+    {:ok, view, _html} = live(conn, ~p"/todo")
+
+    view
+    # |> form("#add-todo", %{todo: %{body: "Form fellowship"}})
+    |> render_submit("create", %{todo: %{body: "Form fellowship"}})
+
+    assert has_element?(view, "[data-role=todo]", "Form fellowship")
+  end
 end
