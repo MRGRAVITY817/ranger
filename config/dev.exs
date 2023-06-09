@@ -3,8 +3,8 @@ import Config
 # Configure your database
 config :ranger, Ranger.Repo,
   username: "postgres",
-  password: "postgres",
-  hostname: "localhost",
+  password: "1q2w3e4r",
+  hostname: "0.0.0.0",
   database: "ranger_dev",
   stacktrace: true,
   show_sensitive_data_on_connection_error: true,

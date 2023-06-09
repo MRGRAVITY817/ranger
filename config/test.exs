@@ -6,9 +6,9 @@ import Config
 # to provide built-in test partitioning in CI environment.
 # Run `mix help test` for more information.
 config :ranger, Ranger.Repo,
+  password: "1q2w3e4r",
   username: "postgres",
-  password: "postgres",
-  hostname: "localhost",
+  hostname: "0.0.0.0",
   database: "ranger_test#{System.get_env("MIX_TEST_PARTITION")}",
   pool: Ecto.Adapters.SQL.Sandbox,
   pool_size: 10
