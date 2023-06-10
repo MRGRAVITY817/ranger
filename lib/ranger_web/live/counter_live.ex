@@ -16,7 +16,6 @@ defmodule RangerWeb.CounterLive do
           <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 12h-15" />
         </svg>
       </.button>
-
       <div id="count" class="font-extrabold text-3xl"><%= @count %></div>
 
       <.button id="increment" phx-click="increase" class="bg-blue-500 hover:bg-blue-700" type="button">
